@@ -1,0 +1,12 @@
+.container {
+  height: 100vh;
+  display: flex;
+
+  .content {
+    height: -webkit-fill-available;
+    width: -webkit-fill-available;
+    padding: 4rem;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+  }
+}

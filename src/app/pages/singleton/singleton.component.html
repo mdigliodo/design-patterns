@@ -1,0 +1,72 @@
+<section class="pattern">
+    <strong>Singleton pattern</strong>
+    <p>
+        The Singleton pattern is a creational design pattern that restricts the instantiation of a class to a single
+        object.
+        It ensures that only one instance of the class exists throughout the application and provides a global point of
+        access to that instance. This pattern is commonly used when there is a need for a single, shared resource or
+        when it
+        is necessary to control the access to a resource in a centralized manner.
+    </p>
+
+    <p>
+        Angular services are often implemented using the Singleton pattern. A service is instantiated once and shared
+        across
+        multiple components, allowing them to communicate and share data.
+    </p>
+
+    <p>
+        To create a new service in Angular, you can use the Angular CLI to generate a new service file. The following
+        command
+        will generate a new service file called MySingletonService:
+    </p>
+
+    <code>
+    ng generate service singleton
+</code>
+
+    <p>
+        The service file will be created in the src/app directory and will look like this:
+    </p>
+
+    <img src="/assets/images/singleton.service.svg" alt="singleton.service.svg">
+
+    <p>
+        There are two ways to create a single service in angular that is by using:
+    </p>
+
+    <ul>
+        <li>
+            <strong>The providedIn</strong> property is a feature from Angular 6 that allows you to specify the module
+            that should provide
+            the
+            service. When you use providedIn to provide a service, Angular creates a single, shared instance of the
+            service
+            and
+            makes it available to any class that inject it. The service is provided at the root level by default, but
+            you
+            can
+            specify a different module if you want to limit the scope of the service to a specific module or component.
+        </li>
+        <img src="/assets/images/singleton.component.svg" alt="singleton.component.svg">
+        <li style="margin-top: 10px;">
+            <strong>The NgModule</strong> providers array is the traditional way to provide a service in Angular. You
+            can
+            add the service to
+            the
+            providers array of the module that should provide the service, and Angular will create a single, shared
+            instance
+            of
+            the service and make it available to any class that inject it. The service is provided at the module level,
+            so
+            it is
+            only available to the classes that are part of that module.
+        </li>
+        <img src="/assets/images/app.module.singleton.svg" alt="singleton.component.svg">
+    </ul>
+
+    <p>
+        That's how you can implement the Singleton pattern in Angular using a service. This allows you to share data,
+        maintain state, and provide centralized functionality throughout your application.
+    </p>
+</section>

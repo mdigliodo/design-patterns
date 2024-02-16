@@ -1,0 +1,35 @@
+<section class="pattern">
+    <strong>Observer</strong>
+
+    <p>
+        The observer pattern is a software design pattern in which an object, called the subject, maintains a list of
+        its dependents, called observers, and notifies them of any state changes, usually by calling one of their
+        methods.
+    </p>
+
+    <p>
+        Angular leverages the Observer pattern through the EventEmitter class and the RxJS library. Components can emit
+        events using EventEmitters, and other components can subscribe to these events to react accordingly.
+    </p>
+
+    <strong>Component emitting an event</strong>
+    <p>
+        In the example above, the observer component listens for the event emitted by the subject component. When the
+        event is emitted, the observer component reacts accordingly.
+    </p>
+    <img src="assets/images/observer1.component.ts.svg" alt="observer1.component.ts.svg">
+
+    <strong>Component subscribing to an event</strong>
+    <p>
+        The subject component emits an event when the button is clicked. The observer component listens for this event
+        and reacts accordingly.
+    </p>
+    <img src="assets/images/observer.component.ts.svg" alt="observer.component.ts.svg">
+
+    <p>
+        The <strong>observer</strong> pattern is a powerful tool for building reactive applications. It allows components to communicate
+        with each other without having to know about each other. This makes it easier to build modular and reusable
+        components. It also makes it easier to build applications that are easy to test and maintain.
+    </p>
+
+</section>

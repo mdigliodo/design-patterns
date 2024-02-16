@@ -1,1 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 0;
+  text-align: justify;
+}
+
+code {
+  font-family: Consolas, "courier new", monospace;
+  color: crimson;
+  background-color: #f1f1f1;
+  padding: 2px;
+}
+
+section.pattern {
+  max-width: 50rem;
+}

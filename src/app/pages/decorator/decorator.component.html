@@ -1,0 +1,56 @@
+<section class="pattern">
+    <strong>Decorator</strong>
+
+    <p>
+        The Decorator pattern allows you to add new functionality to an existing object without altering its structure.
+        This
+        pattern is useful when you need to add new behaviors or responsibilities to individual objects at runtime. By
+        encapsulating these behaviors in separate classes, you can easily add or remove them as needed.
+    </p>
+
+    <p>
+        Angular decorators, such as <code>&#64;Component</code> and <code>&#64;Injectable</code>, are based on the
+        Decorator pattern. Decorators provide a
+        way to enhance or modify the behavior of classes or class members without directly modifying the underlying
+        code.
+    </p>
+
+    <strong>Here's an example of implementing the Decorator pattern in Angular:</strong>
+
+    <p>
+        Create a base component that represents the core functionality:
+    </p>
+
+    <img src="assets/images/base.component.svg" alt="base.component.svg">
+
+    <p>
+        Create a decorator component that extends the base component:
+    </p>
+
+    <img src="assets/images/decorator-apply.component.svg" alt="decorator-apply.component.svg">
+
+    <p>
+        In this example, the <code>DecoratorComponent</code> is a child component that extends the functionality of the
+        <code>BaseComponent</code>. It wraps the <code>BaseComponent</code> within itself and adds extra content using
+        <code> &#60;ng-content&#62; </code>. This
+        allows you to inject additional behavior or template content around the base component.
+    </p>
+
+    <p>
+        Use the decorator component in your application:
+    </p>
+
+    <img src="assets/images/decorator.component.html.svg" alt="decorator.component.html.svg">
+
+
+    <p> Result: </p>
+    <app-decorator-apply>
+        <app-base></app-base>
+    </app-decorator-apply>
+
+    <p>
+        By using the <strong>Decorator pattern</strong>, you can dynamically extend or modify the functionality of existing
+        components by wrapping them within decorator components. This approach provides flexibility, code reusability,
+        and maintainability, as you can reuse the base components while adding specific behavior or content as needed.
+    </p>
+</section>

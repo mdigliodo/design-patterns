@@ -4,6 +4,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { DependencyInjectionComponent } from './pages/dependency-injection/dependency-injection.component';
 import { ObserverComponent } from './pages/observer/observer.component';
 import { StrategyComponent } from './pages/strategy/strategy.component';
+import { DecoratorComponent } from './pages/decorator/decorator.component';
 
 export const routes: Routes = [
     {
@@ -25,6 +26,10 @@ export const routes: Routes = [
     {
         path: 'strategy',
         component: StrategyComponent
+    },
+    {
+        path: 'decorator',
+        component: DecoratorComponent
     },
     {
         path: '**',

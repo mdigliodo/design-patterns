@@ -2,11 +2,66 @@
     <strong>Strategy</strong>
 
     <p>
-        The strategy pattern is a software design pattern that enables an algorithm's behavior to be selected at
-        runtime.
-        The strategy pattern defines a family of algorithms, encapsulates each algorithm, and makes the algorithms
-        interchangeable within that family. Strategy lets the algorithm vary independently from clients that use it.
-        This makes it easier to build applications that are easy to test and maintain.
+        The Strategy pattern enables you to dynamically select and switch between different strategies at runtime based
+        on
+        specific conditions or requirements. By encapsulating these behaviors in separate classes, components can switch
+        between strategies based on specific conditions. This makes it easier to build applications that are easy to
+        test and maintain.
+    </p>
+
+    <p>
+        Angular leverages the Strategy pattern through the use of services. Services are used to encapsulate specific
+        behaviors and can be injected into components to provide specific functionality. This makes it easier to build
+        modular and reusable components.
+    </p>
+
+    <strong>Here's an example of implementing the Strategy pattern in Angular:</strong>
+
+    <p>
+        Define an interface that represents the common behavior of the strategies. Let's assume we have a payment
+        processing scenario:
+    </p>
+
+    <img src="assets/images/payment-strategy.interface.svg" alt="payment-strategy.interface.svg">
+
+    <p>
+        Implement multiple strategies by creating separate classes that implement the "PaymentStrategy" interface.
+        Each class will provide its own implementation of the "processPayment" method
+    </p>
+
+    <img src="assets/images/payment.strategy.svg" alt="payment.strategy.svg">
+
+    <p>
+        Create a context class that will use the strategies and provide a method to set the active strategy:
+    </p>
+
+    <img src="assets/images/payment.context.svg" alt="payment.context.svg">
+
+    <p>
+        Now, you can utilize the strategies in your Angular components or services. For example:
+    </p>
+
+    <img src="assets/images/strategy.component.svg" alt="strategy.component.svg">
+
+    <p>
+        In this example, the <code>StrategyComponent</code> uses the <code>PaymentContext</code> to switch between
+        different payment strategies
+        (<code>CreditCardStrategy</code> and <code>PaypalStrategy</code>) based on user actions or conditions. By
+        setting the active strategy
+        through <code>setStrategy</code>, you can dynamically change the behavior of the payment processing logic in
+        <code>processPayment</code>.
+    </p>
+
+    <p>
+        This implementation allows for easy extensibility, as you can add new strategies by implementing the
+        <code>PaymentStrategy</code> interface and use them interchangeably within the <code>PaymentComponent</code> or any other component
+        that requires payment processing functionality.
+    </p>
+
+    <p>
+        The Strategy pattern provides flexibility and maintainability by separating the implementation of different
+        algorithms or behaviors from the client code, allowing you to change or extend strategies without modifying
+        existing code.
     </p>
 
 </section>

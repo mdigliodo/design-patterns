@@ -5,6 +5,9 @@ import { DependencyInjectionComponent } from './pages/dependency-injection/depen
 import { ObserverComponent } from './pages/observer/observer.component';
 import { StrategyComponent } from './pages/strategy/strategy.component';
 import { DecoratorComponent } from './pages/decorator/decorator.component';
+import { FacadeComponent } from './pages/facade/facade.component';
+import { CompositeComponent } from './pages/composite/composite.component';
+import { FactoryComponent } from './pages/factory/factory.component';
 
 export const routes: Routes = [
     {
@@ -30,6 +33,18 @@ export const routes: Routes = [
     {
         path: 'decorator',
         component: DecoratorComponent
+    },
+    {
+        path: 'facade',
+        component: FacadeComponent
+    },
+    {
+        path: 'composite',
+        component: CompositeComponent
+    },
+    {
+        path: 'factory',
+        component: FactoryComponent
     },
     {
         path: '**',

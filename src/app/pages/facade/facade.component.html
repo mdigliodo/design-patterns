@@ -1,0 +1,60 @@
+<section class="pattern">
+    <strong>Facade</strong>
+
+    <p>
+        The Facade pattern is a structural design pattern that provides a simplified interface to a complex subsystem,
+        making it easier to use and understand. In Angular, you can apply the Facade pattern to create a simplified API
+        or service that encapsulates the complexity of interacting with multiple components, services, or modules.
+    </p>
+
+    <strong>
+        Here's an example of implementing the Facade pattern in Angular:
+    </strong>
+
+
+    <p>
+        Identify a complex subsystem or set of related components/services that you want to simplify for client usage.
+    </p>
+
+    <p>
+        Create a new service or class that encapsulates the complexity of the subsystem and provides a simplified API
+        for client usage.
+    </p>
+
+    <img src="assets/images/facade.service.svg" alt="facade.service.svg">
+
+    <p>
+        Implement the complex subsystem components/services that the Facade service interacts with. These
+        components/services handle the actual complex logic.
+    </p>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr; place-items: center;">
+        <img style="max-width: 35rem;" src="assets/images/facadesuba.service.svg" alt="facadesuba.service.svg">
+        <img style="max-width: 35rem;" src="assets/images/facadesubb.service.svg" alt="facadesubb.service.svg">
+    </div>
+
+    <p>
+        Use the Facade service in your components to simplify the usage of the complex subsystem:
+    </p>
+
+    <img src="assets/images/facade.component.svg" alt="facade.component.svg">
+
+
+    <p>
+        In this example, the <code>FacadeComponent</code> utilizes the <code>FacadeService</code> to perform complex
+        operations without
+        needing to interact directly with the complex subsystem (<code>ComplexServiceAService</code> and
+        <code>ComplexServiceBService</code>). The
+        <code>FacadeService</code> encapsulates the complexity and provides a simplified interface for the client
+        component to
+        interact with.
+    </p>
+
+    <p>
+        By using the Facade pattern in Angular, you can simplify the usage of complex subsystems, hide their
+        implementation details, and provide a straightforward and easy-to-use interface for clients. This promotes code
+        maintainability, readability, and modularity by abstracting the complexity of interacting with multiple
+        components or services behind a single facade.
+    </p>
+
+</section>

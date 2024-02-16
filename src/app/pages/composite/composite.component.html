@@ -1,0 +1,52 @@
+<section class="pattern">
+    <strong>Composite</strong>
+
+    <p>
+        The Composite pattern is a structural design pattern that allows you to compose objects into tree structures to
+        represent part-whole hierarchies. In Angular, you can apply the Composite pattern to create a component tree
+        structure that represents a part-whole hierarchy, where each component can be composed of other components to
+        form a tree.
+    </p>
+
+    <strong>
+        Here's an example of implementing the Composite pattern in Angular:
+    </strong>
+
+    <p>
+        Create an abstract class or interface that represents the common behavior for both individual objects and
+        groups:
+    </p>
+
+    <img src="assets/images/composite.interface.svg" alt="composite.interface.svg">
+
+    <p>
+        Implement the abstract class or interface for individual objects:
+    </p>
+
+    <img src="assets/images/leaf.component.svg" alt="leaf.component.svg">
+
+    <p>
+        Implement the abstract class or interface for the composite object, which can contain both individual objects
+        and other composite objects:
+    </p>
+
+    <img src="assets/images/composite.component.svg" alt="composite.component.svg">
+
+    <p>
+        In this example, we create a tree-like structure using the Composite pattern. The
+        <code>CompositeComponent</code> can
+        contain both individual <code>LeafComponent</code> objects and other <code>CompositeComponent</code> objects.
+        Calling the
+        <code>operation()</code> method on the top-level <code>CompositeComponent</code> will recursively invoke the
+        operation on all its
+        children, whether they are leaf components or other composite components.
+    </p>
+
+
+    <p>
+        By using the Composite pattern in Angular, you can represent complex hierarchical relationships between
+        components or services in a uniform manner. It allows you to treat individual objects and groups of objects in a
+        consistent way, simplifying the code and enabling recursive operations on the composite structure.
+    </p>
+
+</section>

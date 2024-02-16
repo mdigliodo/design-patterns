@@ -1,0 +1,58 @@
+<section class="pattern">
+    <strong>Factory</strong>
+
+    <p>
+        The Factory pattern is a creational design pattern that provides an interface for creating objects in a
+        superclass, but allows subclasses to alter the type of objects that will be created. In Angular, you can apply
+        the
+        Factory pattern to create a factory class that provides a method for creating objects, and then create
+        subclasses
+        that override the factory method to create different types of objects.
+    </p>
+
+    <strong>Here's an example of implementing the Factory pattern in Angular:</strong>
+
+
+    <p>
+        Create an abstract class or interface that represents the common behavior for both individual objects and
+        groups:
+    </p>
+
+    <img src="assets/images/product.interface.ts.svg" alt="product.interface.ts.svg">
+
+    <p>
+        Implement multiple classes that conform to the <code>Product</code> interface:
+    </p>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr; place-items: center;">
+        <img style="max-width: 35rem;" src="assets/images/product-a.svg" alt="product-a.svg">
+        <img style="max-width: 35rem;" src="assets/images/product-b.svg" alt="product-b.svg">
+    </div>
+
+    <p>
+        Create a factory class that encapsulates the object creation logic:
+    </p>
+
+    <img src="assets/images/factory.service.svg" alt="factory.service.svg">
+
+    <p>
+        Use the factory class to create instances of the desired products:
+    </p>
+
+    <img src="assets/images/factory.component.svg" alt="factory.component.svg">
+
+    <p>
+        In this example, the <code>FactoryComponent</code> uses the <code>FactoryService</code> to create instances of
+        different products
+        based on the provided type. By calling the <code>createProduct</code> method with the desired type ("A" or "B"),
+        it
+        receives an instance of the corresponding product class and can invoke its <code>operation()</code> method.
+    </p>
+
+    <p>
+        Using the Factory pattern in Angular provides a centralized place for creating objects and decouples the client
+        code from the concrete classes. It allows for flexible object creation and enables easy extensibility by adding
+        new product classes and updating the factory logic accordingly.
+    </p>
+
+</section>

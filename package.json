@@ -5,13 +5,9 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build:production": "ng build --configuration production",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test",
-    "serve:ssr:design-patterns": "node dist/design-patterns/server/server.mjs",
-    "dev:ssr": "ng run design-patterns:serve-ssr",
-    "serve:ssr": "node dist/design-patterns/server/main.js",
-    "build:ssr": "ng build && ng run design-patterns:server",
-    "prerender": "ng run design-patterns:prerender"
+    "test": "ng test"
   },
   "private": true,
   "dependencies": {
